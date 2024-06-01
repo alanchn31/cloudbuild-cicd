@@ -7,6 +7,7 @@ app = Flask(__name__)
 client = bigquery.Client()
 
 @app.route('/')
+
 def main(big_query_client=client):
     table_id = "gcp-mlops-425102.test_schema.stroke_data"
     job_config = bigquery.LoadJobConfig(
